@@ -1,0 +1,14 @@
+Disk Access Patterns:
+The disk access patterns in this implementation involve reading the centroids from the file once in the mapper and writing the new centroids to the output in the reducer. The data points are communicated through the intermediate files between the mapper and the reducer.
+
+Scenarios for MrJob K-Means:
+
+Using MrJob for K-means could be advisable in scenarios where:
+
+Distributed Computing: You have a large dataset that cannot fit into the memory of a single machine. MrJob allows you to distribute the computation across a cluster of machines.
+
+Ease of Use: MrJob simplifies the process of writing and running MapReduce jobs. If you're familiar with Python, it provides a convenient way to implement distributed algorithms like K-means.
+
+Integration with Hadoop/EMR: If you are working in a Hadoop or EMR (Elastic MapReduce) environment, MrJob provides a Python interface to run MapReduce jobs on these platforms.
+
+Incremental Processing: If you need to perform multiple iterations of K-means and update centroids incrementally, MrJob can be a suitable choice.
